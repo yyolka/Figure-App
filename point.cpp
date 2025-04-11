@@ -1,12 +1,15 @@
 #include "point.h"
 
 void Point::output(std::ostream& os) const {
-    os << "(" << x << ", " << y << ")";
+    os << "(" << getX() << ", " << getY() << ")";
 }
 
 void Point::input(std::istream& is) {
     while (true) {
-        if (is >> x >> y) {
+        double tmpX, tmpY;
+        if (is >> tmpX >> tmpY) {
+            setX(tmpX);
+            setY(tmpY);
             break;
         }
         else {
@@ -23,4 +26,20 @@ std::ostream& operator<<(std::ostream& os, const Point& a) {
 std::istream& operator>>(std::istream& is, Point& a) {
     a.input(is);
     return is;
+}
+
+double Point::getX() const{
+    return x;
+}
+
+double Point::getY() const {
+    return y;
+}
+
+void Point::setX(double newX) {
+    x = newX;
+}
+
+void Point::setY(double newY) {
+    y = newY;
 }

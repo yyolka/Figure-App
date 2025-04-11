@@ -6,10 +6,10 @@ double Circle::area() const{
 
 void Circle::input(istream& is) {
     is >> name >> center;
-    if (!(std::cin >> radius)) {
+    if (!(cin >> radius)) {
         throw InvalidCircleException("Radius must be number.");
     }
-    std::cin.ignore();
+    cin.ignore();
     if (radius <= 0) {
         throw InvalidCircleException("Radius must be positive.");
     }

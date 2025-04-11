@@ -12,13 +12,16 @@
 using namespace std;
 
 class Shape {
-private:
+protected:
+    string name;
 public:
     virtual ~Shape() = default;
+    Shape() = default;
+    explicit Shape(const string& name) : name(name) {}
     virtual double area() const = 0;
     virtual void input(istream& is) = 0;
     virtual void output(ostream& os) const = 0;
-    virtual std::string type() const = 0;
+    virtual string type() const = 0;
     friend istream& operator>>(istream& is, Shape& a) {
         a.input(is);
         return is;
@@ -27,7 +30,6 @@ public:
         a.output(os);
         return os;
     }
-    friend class Actions;
 };
 
 #endif // SHAPE_H

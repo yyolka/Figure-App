@@ -1,7 +1,7 @@
 #include "triangle.h"
 
 double Triangle::area() const {
-    return 0.5 * std::abs((c.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)));
+    return 0.5 * std::abs((c.getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - a.getY()) + c.getX() * (a.getY() - b.getY())));
 };
 
 void Triangle::input(istream& is) {

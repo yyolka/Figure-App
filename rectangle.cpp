@@ -1,8 +1,8 @@
 #include "rectangle.h"
 
 double Rectangle::area() const {
-    double a = abs(right.x - left.x);
-    double b = abs(right.y - left.y);
+    double a = abs(right.getX() - left.getX());
+    double b = abs(right.getY() - left.getY());
     return a * b;
 }
 

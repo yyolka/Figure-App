@@ -5,20 +5,17 @@ CONFIG -= qt
 CONFIG += console
 
 SOURCES += \
-        actions.cpp \
         circle.cpp \
+        main.cpp \
         menu.cpp \
-        output.cpp \
         point.cpp \
         rectangle.cpp \
         triangle.cpp
 
 HEADERS += \
-    actions.h \
     circle.h \
     error.h \
     menu.h \
-    output.h \
     point.h \
     rectangle.h \
     shape.h \
